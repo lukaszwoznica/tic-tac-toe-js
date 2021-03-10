@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+}
+
+.board {
+    min-width: 400px;
+    background-color: #292929;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    grid-gap: 3px;
+    border: 3px solid #292929;
+}
+
+.field {
+    background-color: #373737;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.field:hover {
+    background-color: #454545;
+}
+
+.game-over-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.reset-button {
+    border: 2px solid #fafafa;
+    background-color: transparent;
+    color: #fafafa;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 1.2rem;
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.reset-button:hover {
+    background-color: #fafafa;
+    color: #000;
+    padding: .5rem 3.5rem;
+}
+
+.scoreboard {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: 0 auto;
+    max-width: 200px;
+    background-color: #454545;
+}
+
+.player-score-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #373737;
+    font-size: 2rem;
+    position: relative;
+}
+
+.player-score-wrapper:first-child {
+    border-right: 2px solid #8d8d8d;
+}
+
+.player-icon, .player-score {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.player-icon {
+    background-color: #727272;
+    padding: .2rem;
+}
+
+.turn-indicator {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    display: none;
+    background-color: #d8a100;
+}
+
+.turn-indicator.active {
+    display: block;
+}
+
+#nought-indicator {
+    left: -6px;
+}
+
+#cross-indicator {
+    right: -6px;
+}
+
+@media (max-width: 768px) {
+    .game-over-screen {
+        font-size: 3.5rem;
+    }
+
+    .reset-button {
+        font-size: 1.2rem;
+        padding: .5rem 2rem;
+    }
+
+    .reset-button:hover {
+        padding: .5rem 3rem;
+    }
+
+    .board {
+        min-width: 350px;
+    }
+}

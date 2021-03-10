@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/84affb6238.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <title>Tic Tac Toe Game</title>
+</head>
+
+<body>
+<div id="app">
+    <div class="scoreboard">
+        <div class="player-score-wrapper">
+            <div id="nought-indicator" class="turn-indicator active"></div>
+            <div class="player-icon">
+                <i class="fa fa-circle-o"></i>
+            </div>
+            <div id="nought-score" class="player-score">0</div>
+        </div>
+        <div class="player-score-wrapper">
+            <div id="cross-indicator" class="turn-indicator"></div>
+            <div id="cross-score" class="player-score">0</div>
+            <div class="player-icon">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="board" class="board"></div>
+</div>
+</body>
+</html>
